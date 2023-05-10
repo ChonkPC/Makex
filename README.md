@@ -73,7 +73,7 @@ Table size: 0x23
 CODE_AD: 0x10000000
 CODE_SZ: 0x74ed8
 DATA_AD: 0x100f0000
-DATA_SZ: 0x23
+DATA_SZ: 0x2fc2
 ```
 
 ## Contributing

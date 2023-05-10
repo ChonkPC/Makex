@@ -27,6 +27,7 @@ class Builder:
     data_points = {}
     current_addr = config["DATA_AD"]
     total_len = 0
+    total_size = 0
 
     for entity in os.listdir(path = path):
       print("-----------------------")
@@ -47,6 +48,7 @@ class Builder:
 
       #  bytes.__len__ is the size of the bytes
       size = len(data)
+      total_size += size
 
       name = entity.encode("ascii") 
       if len(name) <= 10:
@@ -77,7 +79,7 @@ class Builder:
     padding = 0x1C2 - total_len
 
     data_points["padding"] = [*[0]*padding]
-    data_points["_size"] = [total_len]
+    data_points["_size"] = [total_size]
 
     return data_points
 
